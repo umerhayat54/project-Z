@@ -10,6 +10,11 @@ export const row3 = require('../assets/images/row3.jpeg');
 export const help = require('../assets/images/help.png');
 export const backArrow = require('../assets/icon/ArrowsPreviuos.png');
 export const Avatar = require('../assets/images/Avatar/Avatar.png');
+export const code = require('../assets/images/code.png');
+export const menu = require('../assets/icon/menu.png');
+export const click = require('../assets/icon/click.png');
+export const scan = require('../assets/images/scan.png');
+export const varis = require('../assets/icon/varis.png');
 export default {
   user,
   search,
@@ -17,10 +22,15 @@ export default {
   Avatar,
   row2,
   user1,
+  scan,
   home,
   heart,
   Plus,
   like,
   help,
   backArrow,
+  code,
+  menu,
+  click,
+  varis,
 };

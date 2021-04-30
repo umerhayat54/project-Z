@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
+  headerparent: {justifyContent: 'center', alignItems: 'center', marginTop: 30},
   inputStyles: {
     backgroundColor: 'white',
     height: 85,
@@ -20,5 +21,45 @@ export default StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 13.16,
     elevation: 20,
+  },
+  backArrow: {marginTop: 20, width: 18, marginLeft: 20},
+  mainIconParent: {
+    flex: 8,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  IconImage: {height: 40, width: 90, marginRight: 30},
+  loginTxt: {color: '#205072', marginTop: 20, fontSize: 16},
+  headerTxt2: {
+    color: '#68B2A0',
+    marginTop: 20,
+    width: 200,
+    textAlign: 'center',
+    fontSize: 16,
+  },
+  LoginBtnTxt: {color: 'white', fontSize: 13},
+  touchOpBtn: {
+    height: 60,
+    width: '90%',
+    marginLeft: 20,
+    marginRight: 20,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    position: 'absolute',
+    left: 0,
+
+    bottom: 20,
+  },
+  lineargr: {
+    height: 60,
+    width: '100%',
+    marginLeft: 20,
+    marginRight: 20,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

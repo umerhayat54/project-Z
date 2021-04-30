@@ -1,57 +1,35 @@
 import React from 'react';
-import {View, Image, Text, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  StatusBar,
+} from 'react-native';
 import {COLORS, icons} from '../../constants';
 import LinearGradient from 'react-native-linear-gradient';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import styles from './styles';
 export default function Home({navigation}) {
-  renderheader = () => {
-    return <View style={{padding: 20, backgroundColor: '#E0ECDE'}}></View>;
-  };
   renderheaderDetail = () => {
     return (
-      <View style={{borderBottomLeftRadius: 40, backgroundColor: '#E0ECDE'}}>
+      <View style={styles.headerParent}>
         <View
           style={{
             backgroundColor: '#E0ECDE',
             margin: 20,
           }}>
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity>
-              <Image
-                style={{marginTop: 20, marginLeft: 10}}
-                source={require('../../assets/icon/menu.png')}
-              />
+            <TouchableOpacity activeOpacity={0.7}>
+              <Image style={styles.menu} source={icons.menu} />
             </TouchableOpacity>
-            <Image
-              style={{
-                position: 'absolute',
-
-                bottom: 0,
-                right: -50,
-                top: -8,
-              }}
-              source={icons.Avatar}
-            />
+            <Image style={styles.Avatar} source={icons.Avatar} />
           </View>
         </View>
-        <View style={{margin: 20, marginTop: 0}}>
+        <View style={styles.txtParent}>
           <View style={{marginTop: 20, margin: 30}}>
-            <Text
-              style={{
-                color: '#205072',
-                fontSize: 24,
-                textAlign: 'left',
-                width: 200,
-              }}>
-              Good Evening Williams
-            </Text>
-            <Text
-              style={{
-                color: '#205072',
-                marginTop: 10,
-                fontSize: 13,
-                textAlign: 'left',
-              }}>
+            <Text style={styles.massagesTxt}>Good Evening Williams</Text>
+            <Text style={styles.headerTxt2}>
               You can now have access to your covid-19 result anytime, anywhere.
               Also you can….
             </Text>
@@ -59,6 +37,8 @@ export default function Home({navigation}) {
 
           <View style={{flexDirection: 'row', marginLeft: 40}}>
             <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => navigation.navigate('TestReport')}
               style={{
                 backgroundColor: '#205072',
                 borderRadius: 20,
@@ -75,6 +55,7 @@ export default function Home({navigation}) {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
+              activeOpacity={0.7}
               style={{
                 backgroundColor: '#329D9C',
                 borderRadius: 20,
@@ -107,6 +88,8 @@ export default function Home({navigation}) {
       <View style={{alignItems: 'center'}}>
         <View style={{flexDirection: 'row', margin: 20}}>
           <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate('GenerateCode')}
             style={{
               backgroundColor: '#329D9C',
               borderRadius: 20,
@@ -123,6 +106,8 @@ export default function Home({navigation}) {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate('ScanningCode')}
             style={{
               backgroundColor: '#329D9C',
               borderRadius: 20,
@@ -210,7 +195,7 @@ export default function Home({navigation}) {
             <View style={{position: 'absolute', right: 10, top: 30}}>
               <Text
                 style={{
-                  color: Colors.white,
+                  color: COLORS.white,
                   width: 150,
                   fontSize: 17,
                   textAlign: 'left',
@@ -236,6 +221,7 @@ export default function Home({navigation}) {
 
   return (
     <View style={{flex: 1}}>
+      <StatusBar backgroundColor="#E0ECDE" />
       {renderheaderDetail()}
       <ScrollView showsVerticalScrollIndicator={false}>
         {renderMain()}

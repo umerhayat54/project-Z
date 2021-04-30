@@ -3,6 +3,8 @@ import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
 import styles from './style';
 import LinearGradient from 'react-native-linear-gradient';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/AntDesign';
+import {icons} from '../../constants';
 export default function Login({navigation}) {
   const [phone, setPhone] = useState('');
   const [Email, setEmail] = useState('');
@@ -10,41 +12,22 @@ export default function Login({navigation}) {
 
   renderheader = () => {
     return (
-      <View
-        style={{justifyContent: 'center', alignItems: 'center', marginTop: 30}}>
+      <View style={styles.headerparent}>
         <View style={{flexDirection: 'row'}}>
-          <TouchableOpacity>
-            <AntDesign
-              name="arrowleft"
-              style={{marginLeft: 20}}
-              color={'black'}
-              size={30}
-            />
+          <TouchableOpacity
+            activeOpacity={0.9}
+            onPress={() => navigation.goBack()}>
+            <Image style={styles.backArrow} source={icons.backArrow} />
           </TouchableOpacity>
-          <View
-            style={{
-              flex: 8,
-              alignSelf: 'center',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
+          <View style={styles.mainIconParent}>
             <Image
-              style={{height: 40, width: 90, marginRight: 30}}
+              style={styles.IconImage}
               source={require('../../assets/images/Icons_Main.png')}
             />
           </View>
         </View>
-        <Text style={{color: '#205072', marginTop: 20, fontSize: 16}}>
-          Login
-        </Text>
-        <Text
-          style={{
-            color: '#68B2A0',
-            marginTop: 20,
-            width: 200,
-            textAlign: 'center',
-            fontSize: 16,
-          }}>
+        <Text style={styles.loginTxt}>Login</Text>
+        <Text style={styles.headerTxt2}>
           Enter your login details to access your account
         </Text>
       </View>
@@ -71,26 +54,16 @@ export default function Login({navigation}) {
             secureTextEntry
             value={Password}></TextInput>
         </View>
-        <LinearGradient
-          colors={['#7BE495', '#329D9C']}
-          style={{
-            height: 60,
-            width: '90%',
-            marginLeft: 20,
-            marginRight: 20,
-            borderRadius: 25,
-            alignItems: 'center',
-            justifyContent: 'center',
-
-            position: 'absolute',
-            left: 0,
-
-            bottom: 20,
-          }}>
-          <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-            <Text style={{color: 'white', fontSize: 13}}>Login</Text>
-          </TouchableOpacity>
-        </LinearGradient>
+        <TouchableOpacity
+          activeOpacity={0.9}
+          onPress={() => navigation.navigate('Signup')}
+          style={styles.touchOpBtn}>
+          <LinearGradient
+            colors={['#7BE495', '#329D9C']}
+            style={styles.lineargr}>
+            <Text style={styles.LoginBtnTxt}>Login</Text>
+          </LinearGradient>
+        </TouchableOpacity>
       </View>
     );
   };

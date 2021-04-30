@@ -17,6 +17,7 @@ export const COLORS = {
   transparent: 'transparent',
   darkgray: '#898C95',
   selected: '#205072',
+  verify: '#329D9C',
 };
 
 export const SIZES = {

@@ -15,7 +15,9 @@ import Onboarding3 from '../container/Onboarding/Onboarding3';
 import Login from '../container/Login';
 import Signup from '../container/Signup';
 import Tabs from './Tabs';
-
+import GenerateCode from '../container/GenerateCode';
+import TestReport from '../container/TestReport';
+import ScanningCode from '../container/ScanningCode';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function Navigation() {
@@ -27,6 +29,9 @@ export default function Navigation() {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="Tabs" component={Tabs} />
+      <Stack.Screen name="GenerateCode" component={GenerateCode} />
+      <Stack.Screen name="TestReport" component={TestReport} />
+      <Stack.Screen name="ScanningCode" component={ScanningCode} />
     </Stack.Navigator>
   );
 }
