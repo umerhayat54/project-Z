@@ -38,7 +38,14 @@ export default function Onboarding1({navigation}) {
         </TouchableOpacity>
 
         <View style={styles.logintxtParent}>
-          <Text style={{color: '#68B2A08C'}}>Already have an account?</Text>
+          <Text
+            style={{
+              color: '#68B2A08C',
+              fontFamily: 'Montserrat-Medium',
+              fontSize: 12,
+            }}>
+            Already have an account?
+          </Text>
           <TouchableOpacity
             activeOpacity={0.9}
             onPress={() => navigation.navigate('Login')}>
@@ -50,7 +57,8 @@ export default function Onboarding1({navigation}) {
   };
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
+      <StatusBar backgroundColor="white" />
       <ScrollView showsVerticalScrollIndicator={false}>
         {renderHeader()}
       </ScrollView>

@@ -50,6 +50,7 @@ export default function Home({navigation}) {
                   color: COLORS.white,
                   fontSize: 8,
                   textTransform: 'uppercase',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 more details
               </Text>
@@ -69,13 +70,21 @@ export default function Home({navigation}) {
                   color: COLORS.white,
                   fontSize: 8,
                   textTransform: 'uppercase',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 view your profile
               </Text>
             </TouchableOpacity>
           </View>
 
-          <Text style={{marginLeft: 20, marginTop: 30, fontSize: 13}}>
+          <Text
+            style={{
+              marginLeft: 20,
+              marginTop: 30,
+              color: '#205072',
+              fontSize: 13,
+              fontFamily: 'Montserrat-Medium',
+            }}>
             Help in the fight against Covid-19…
           </Text>
         </View>
@@ -101,6 +110,7 @@ export default function Home({navigation}) {
                 color: COLORS.white,
                 fontSize: 12,
                 textTransform: 'uppercase',
+                fontFamily: 'Montserrat-Bold',
               }}>
               Generate CODE
             </Text>
@@ -120,7 +130,7 @@ export default function Home({navigation}) {
               style={{
                 color: COLORS.white,
                 fontSize: 12,
-
+                fontFamily: 'Montserrat-Bold',
                 textTransform: 'uppercase',
               }}>
               SCAN CODE
@@ -199,6 +209,7 @@ export default function Home({navigation}) {
                   width: 150,
                   fontSize: 17,
                   textAlign: 'left',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 Dial 999 for Medical Help!
               </Text>
@@ -209,6 +220,7 @@ export default function Home({navigation}) {
                   fontSize: 12,
                   textAlign: 'left',
                   marginTop: 10,
+                  fontFamily: 'Montserrat-Medium',
                 }}>
                 If any symptoms appear
               </Text>

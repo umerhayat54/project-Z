@@ -12,6 +12,7 @@ export default StyleSheet.create({
     marginTop: 20,
     width: 200,
     textAlign: 'center',
+    fontFamily: 'Montserrat-Bold',
   },
   hearderTxt2: {
     color: '#68B2A0',
@@ -20,8 +21,9 @@ export default StyleSheet.create({
     marginTop: 20,
     width: '80%',
     textAlign: 'center',
+    fontFamily: 'Montserrat-Medium',
   },
-  image: {width: 300, height: 450, marginTop: 20, marginBottom: 100},
+  image: {width: 308, height: 308, marginTop: 20, marginBottom: 100},
   touchOpBtn: {
     height: 60,
     width: '90%',
@@ -45,12 +47,18 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  txtBtn: {color: 'white', fontSize: 13},
+  txtBtn: {
+    color: 'white',
+    textTransform: 'uppercase',
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 13,
+  },
   logintxtParent: {flexDirection: 'row', marginBottom: 20},
   loginTxt: {
     fontSize: 12,
     color: '#205072',
     marginLeft: 10,
     alignItems: 'center',
+    fontFamily: 'Montserrat-Medium',
   },
 });

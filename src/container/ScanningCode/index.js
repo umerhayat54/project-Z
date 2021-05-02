@@ -8,6 +8,10 @@ import {
   StatusBar,
 } from 'react-native';
 import {COLORS, icons} from '../../constants';
+
+import QRCodeScanner from 'react-native-qrcode-scanner';
+import {RNCamera} from 'react-native-camera';
+import style from './style';
 export default function ScanningCode({navigation}) {
   renderheaderDetail = () => {
     return (
@@ -45,9 +49,20 @@ export default function ScanningCode({navigation}) {
                 color: '#205072',
                 fontSize: 16,
                 textAlign: 'left',
-                width: 200,
+
+                fontFamily: 'Montserrat-Bold',
               }}>
-              Scanning Code Successful, Williams
+              Scanning Code Successful,
+            </Text>
+            <Text
+              style={{
+                color: '#205072',
+                fontSize: 24,
+                textAlign: 'left',
+
+                fontFamily: 'Montserrat-Bold',
+              }}>
+              Williams
             </Text>
           </View>
         </View>
@@ -63,29 +78,46 @@ export default function ScanningCode({navigation}) {
           alignItems: 'center',
           alignSelf: 'center',
           justifyContent: 'center',
+          marginBottom: 80,
         }}>
-        <Image source={icons.scan} />
+        {/* <Image style={{marginTop: 30}} source={icons.scan} /> */}
+        <QRCodeScanner
+          cameraStyle={style.cameraStyle}
 
+          // topViewStyle={{backgroundColor:'red'}}
+          // bottomViewStyle={{backgroundColor:'red'}}
+          // onRead={()=>this.onSucc()}
+          // flashMode={RNCamera.Constants.FlashMode.torch}
+        />
         <TouchableOpacity
           activeOpacity={0.7}
           style={{
             backgroundColor: COLORS.verify,
-            position: 'absolute',
+
             padding: 20,
+            marginTop: 90,
             paddingHorizontal: 50,
             borderRadius: 15,
-            bottom: 10,
           }}>
-          <Text style={{color: COLORS.white, fontSize: 15}}>SCAN</Text>
+          <Text
+            style={{
+              color: COLORS.white,
+              fontFamily: 'Montserrat-Bold',
+              fontSize: 15,
+            }}>
+            SCAN
+          </Text>
         </TouchableOpacity>
       </View>
     );
   };
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
       <StatusBar backgroundColor="#E0ECDE" />
       {renderheaderDetail()}
-      {renderMain()}
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {renderMain()}
+      </ScrollView>
     </View>
   );
 }

@@ -10,12 +10,10 @@ import {
 import {COLORS, icons} from '../../constants';
 
 export default function TestReport({navigation}) {
-  renderheaderDetail = () => {
+  renderHeader = () => {
     return (
       <View
         style={{
-          borderBottomLeftRadius: 40,
-          marginBottom: 30,
           backgroundColor: '#E0ECDE',
         }}>
         <View
@@ -24,11 +22,12 @@ export default function TestReport({navigation}) {
             margin: 20,
           }}>
           <View style={{flexDirection: 'row'}}>
-            <TouchableOpacity activeOpacity={0.7}>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => navigation.goBack()}>
               <Image
                 activeOpacity={0.7}
-                onPress={() => navigation.goBack()}
-                style={{marginTop: 20, marginLeft: 10}}
+                style={{marginTop: 20, marginBottom: 20, marginLeft: 10}}
                 source={icons.backArrow}
               />
             </TouchableOpacity>
@@ -44,6 +43,17 @@ export default function TestReport({navigation}) {
             />
           </View>
         </View>
+      </View>
+    );
+  };
+  renderheaderDetail = () => {
+    return (
+      <View
+        style={{
+          borderBottomLeftRadius: 40,
+          marginBottom: 80,
+          backgroundColor: '#E0ECDE',
+        }}>
         <View style={{margin: 20, marginTop: 0}}>
           <View style={{marginTop: 20, margin: 30}}>
             <Text
@@ -51,6 +61,7 @@ export default function TestReport({navigation}) {
                 color: '#205072',
                 fontSize: 13,
                 textAlign: 'left',
+                fontFamily: 'Montserrat-Bold',
               }}>
               Covid-19 rapid test
             </Text>
@@ -60,6 +71,7 @@ export default function TestReport({navigation}) {
                 color: '#205072',
                 fontSize: 16,
                 textAlign: 'left',
+                fontFamily: 'Montserrat-Bold',
               }}>
               COVID-19 TEST RESULT
             </Text>
@@ -68,6 +80,7 @@ export default function TestReport({navigation}) {
                 color: '#205072',
                 fontSize: 13,
                 textAlign: 'left',
+                fontFamily: 'Montserrat-Bold',
               }}>
               Federal Government Approved
             </Text>
@@ -91,8 +104,14 @@ export default function TestReport({navigation}) {
         />
         <View style={{marginLeft: 40, marginBottom: 10, margin: 20}}>
           <View style={{flexDirection: 'row'}}>
-            <View style={{flex: 0.8}}>
-              <Text style={{margin: 10, fontSize: 13, color: '#39576C'}}>
+            <View style={{flex: 8}}>
+              <Text
+                style={{
+                  margin: 10,
+                  fontFamily: 'Montserrat-Bold',
+                  fontSize: 13,
+                  color: '#39576C',
+                }}>
                 DATE ISSUED: 23/03/2021
               </Text>
               <Text
@@ -101,45 +120,106 @@ export default function TestReport({navigation}) {
                   marginTop: 0,
                   fontSize: 13,
                   color: '#39576C',
+                  fontFamily: 'Montserrat-Bold',
                 }}>
                 EXPIRES: 01/04/2021
               </Text>
             </View>
-            <Image style={{flex: 0.2, height: 60}} source={icons.click} />
+            <Image style={{flex: 2, height: 60}} source={icons.click} />
           </View>
         </View>
 
         <View style={{marginLeft: 50, marginBottom: 10, marginTop: 0}}>
-          <Text style={{fontSize: 13, color: COLORS.black}}>DETAILS </Text>
+          <Text
+            style={{
+              fontSize: 13,
+              fontFamily: 'Montserrat-Bold',
+              color: COLORS.black,
+            }}>
+            DETAILS{' '}
+          </Text>
           <View style={{flexDirection: 'row', marginTop: 20}}>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               Name
             </Text>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               Williams
             </Text>
           </View>
-          <View style={{flexDirection: 'row', marginTop: 20}}>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              fontFamily: 'Montserrat-Bold',
+              marginTop: 20,
+            }}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               Result
             </Text>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               Navigative
             </Text>
           </View>
           <View style={{flexDirection: 'row', marginTop: 20}}>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               Code
             </Text>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               1010ASDF
             </Text>
           </View>
           <View style={{flexDirection: 'row', marginTop: 20}}>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               Date
             </Text>
-            <Text style={{fontSize: 13, flex: 0.5, color: COLORS.black}}>
+            <Text
+              style={{
+                fontSize: 13,
+                fontFamily: 'Montserrat-Bold',
+                flex: 0.5,
+                color: COLORS.black,
+              }}>
               23/03/2021
             </Text>
           </View>
@@ -148,9 +228,9 @@ export default function TestReport({navigation}) {
     );
   };
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
       <StatusBar backgroundColor="#E0ECDE" />
-
+      {renderHeader()}
       <ScrollView showsVerticalScrollIndicator={false}>
         {renderheaderDetail()}
       </ScrollView>

@@ -45,8 +45,19 @@ export default function GenerateCode({navigation}) {
                 color: '#205072',
                 fontSize: 16,
                 textAlign: 'left',
+                fontFamily: 'Montserrat-Bold',
               }}>
-              Generating Code Successful, Williams
+              Generating Code Successful,
+            </Text>
+            <Text
+              style={{
+                color: '#205072',
+                fontSize: 24,
+                textAlign: 'left',
+
+                fontFamily: 'Montserrat-Bold',
+              }}>
+              Williams
             </Text>
           </View>
         </View>
@@ -62,29 +73,39 @@ export default function GenerateCode({navigation}) {
           alignItems: 'center',
           alignSelf: 'center',
           justifyContent: 'center',
+          marginBottom: 80,
         }}>
-        <Image source={icons.code} />
+        <Image style={{marginTop: 30}} source={icons.code} />
 
         <TouchableOpacity
           activeOpacity={0.7}
           style={{
             backgroundColor: COLORS.verify,
-            position: 'absolute',
+
             padding: 20,
+            marginTop: 90,
             paddingHorizontal: 50,
             borderRadius: 15,
-            bottom: 10,
           }}>
-          <Text style={{color: COLORS.white, fontSize: 15}}>VERIFY</Text>
+          <Text
+            style={{
+              color: COLORS.white,
+              fontFamily: 'Montserrat-Bold',
+              fontSize: 15,
+            }}>
+            VERIFY
+          </Text>
         </TouchableOpacity>
       </View>
     );
   };
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
       <StatusBar backgroundColor="#E0ECDE" />
       {renderheaderDetail()}
-      {renderMain()}
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {renderMain()}
+      </ScrollView>
     </View>
   );
 }

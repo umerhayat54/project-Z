@@ -1,15 +1,22 @@
 import React, {useState} from 'react';
-import {View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Image,
+  TextInput,
+  StatusBar,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import styles from './style';
 import LinearGradient from 'react-native-linear-gradient';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import Icon from 'react-native-vector-icons/AntDesign';
+
 import {icons} from '../../constants';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 export default function Login({navigation}) {
   const [phone, setPhone] = useState('');
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
-
+  const [hidePass, setHidePass] = useState(true);
   renderheader = () => {
     return (
       <View style={styles.headerparent}>
@@ -48,11 +55,21 @@ export default function Login({navigation}) {
 
         <View style={styles.inputStyles}>
           <TextInput
-            style={{flex: 8}}
+            style={{flex: 9}}
             placeholder="Password"
             onChange={password => setPassword(password)}
-            secureTextEntry
+            secureTextEntry={hidePass ? true : false}
             value={Password}></TextInput>
+          <Icon
+            name={hidePass ? 'eye-slash' : 'eye'}
+            size={15}
+            color="grey"
+            style={{
+              flex: 1,
+              alignSelf: 'center',
+            }}
+            onPress={() => setHidePass(!hidePass)}
+          />
         </View>
         <TouchableOpacity
           activeOpacity={0.9}
@@ -68,7 +85,8 @@ export default function Login({navigation}) {
     );
   };
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, backgroundColor: 'white'}}>
+      <StatusBar backgroundColor="white" />
       {renderheader()}
       {renderMain()}
     </View>

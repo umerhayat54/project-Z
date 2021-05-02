@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  headerparent: {justifyContent: 'center', alignItems: 'center', marginTop: 30},
+  headerparent: {justifyContent: 'center', alignItems: 'center', marginTop: 40},
   inputStyles: {
     backgroundColor: 'white',
     height: 85,
@@ -12,15 +12,15 @@ export default StyleSheet.create({
     padding: 20,
     flexDirection: 'row',
     marginTop: 20,
-    shadowColor: '#000',
+    shadowColor: '#fff',
 
     shadowOffset: {
       width: 0,
-      height: 10,
+      height: 2,
     },
     shadowOpacity: 1,
-    shadowRadius: 13.16,
-    elevation: 20,
+    shadowRadius: 1.16,
+    elevation: 3,
   },
   backArrow: {marginTop: 20, width: 18, marginLeft: 20},
   mainIconParent: {
@@ -30,15 +30,26 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   IconImage: {height: 40, width: 90, marginRight: 30},
-  loginTxt: {color: '#205072', marginTop: 20, fontSize: 16},
+  loginTxt: {
+    color: '#205072',
+    fontFamily: 'Montserrat-Bold',
+    marginTop: 20,
+    fontSize: 16,
+  },
   headerTxt2: {
     color: '#68B2A0',
     marginTop: 20,
     width: 200,
+    fontFamily: 'Montserrat-Medium',
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 12,
   },
-  LoginBtnTxt: {color: 'white', fontSize: 13},
+  LoginBtnTxt: {
+    color: 'white',
+    textTransform: 'uppercase',
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 13,
+  },
   touchOpBtn: {
     height: 60,
     width: '90%',

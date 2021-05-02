@@ -8,7 +8,7 @@ import Svg, {Path} from 'react-native-svg';
 import {isIphoneX} from 'react-native-iphone-x-helper';
 import LinearGradient from 'react-native-linear-gradient';
 import Home from '../container/Home';
-
+import Main from './Main';
 import {COLORS, icons} from '../constants';
 
 const Tab = createBottomTabNavigator();
@@ -102,7 +102,7 @@ const Tabs = () => {
       tabBar={props => <CustomTabBar props={props} />}>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={Main}
         style={{
           backgroundColor: 'white',
         }}

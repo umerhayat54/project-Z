@@ -15,12 +15,14 @@ export default StyleSheet.create({
     color: '#205072',
     fontSize: 24,
     textAlign: 'left',
+    fontFamily: 'Montserrat-Bold',
     width: 200,
   },
   headerTxt2: {
     color: '#205072',
     marginTop: 10,
     fontSize: 13,
+    fontFamily: 'Montserrat-Medium',
     textAlign: 'left',
   },
 });
