@@ -14,14 +14,14 @@ const Stack = createStackNavigator();
 
 export default function Navigation() {
   return (
-    <Stack.Navigator initialRouteName={Onboarding1} headerMode="none">
+    <Stack.Navigator initialRouteName={TurnOn} headerMode="none">
+      <Stack.Screen name="TurnOn" component={TurnOn} />
       <Stack.Screen name="Onboarding1" component={Onboarding1} />
       <Stack.Screen name="Onboarding2" component={Onboarding2} />
       <Stack.Screen name="Onboarding3" component={Onboarding3} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="Tabs" component={Tabs} />
-      <Stack.Screen name="TurnOn" component={TurnOn} />
     </Stack.Navigator>
   );
 }

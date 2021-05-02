@@ -15,6 +15,9 @@ export const menu = require('../assets/icon/menu.png');
 export const click = require('../assets/icon/click.png');
 export const scan = require('../assets/images/scan.png');
 export const varis = require('../assets/icon/varis.png');
+export const iPhone11Outline = require('../assets/images/iPhone11Outline.png');
+export const Rectangle = require('../assets/images/Rectangle.png');
+export const Rectangle2 = require('../assets/images/Rectangle2.png');
 export default {
   user,
   search,
@@ -33,4 +36,7 @@ export default {
   menu,
   click,
   varis,
+  iPhone11Outline,
+  Rectangle,
+  Rectangle2,
 };
